@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import PwaRegister from "./components/PwaRegister";
 import MourningRibbon from "./components/MourningRibbon";
@@ -137,6 +138,7 @@ export default function RootLayout({
         {children}
         <PwaRegister />
         <StickyHelpButton />
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
